@@ -3,7 +3,6 @@
 A polished, full-stack Java web application that demonstrates building a course evaluation platform using JSF for the frontend, JDBC for data access, and MySQL as the persistence layer. This repository contains the application source, the database schema, and instructions to run the project locally or deploy to a Jakarta EE/Tomcat server.
 
 **Table of Contents**
-- [Demo](#demo)
 - [Features](#features)
 - [Tech Stack](#tech-stack)
 - [Project Structure](#project-structure)
