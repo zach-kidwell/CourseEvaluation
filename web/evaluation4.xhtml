@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core">
+<ui:composition template="template.xhtml">
+  <ui:define name="content">
+    <h:form>
+      <div class="section">
+        <h3>ADDITIONAL QUESTION</h3>
+        <table>
+          <tr><th>Question</th><th>Yes/No</th></tr>
+          <tr><td>17. The syllabus was explained at the beginning of the course.</td><td><h:selectOneRadio value="#{evaluationBean.q17}">
+      <f:selectItem itemLabel="Yes" itemValue="Yes"/>
+      <f:selectItem itemLabel="No" itemValue="No"/>
+    </h:selectOneRadio></td></tr>
+          <tr><td>18. The course was delivered as outlined in the syllabus.</td><td><h:selectOneRadio value="#{evaluationBean.q18}">
+      <f:selectItem itemLabel="Yes" itemValue="Yes"/>
+      <f:selectItem itemLabel="No" itemValue="No"/>
+    </h:selectOneRadio></td></tr>
+          <tr><td>19. Instructor explained the grading criteria of the course.</td><td><h:selectOneRadio value="#{evaluationBean.q19}">
+      <f:selectItem itemLabel="Yes" itemValue="Yes"/>
+      <f:selectItem itemLabel="No" itemValue="No"/>
+    </h:selectOneRadio></td></tr>
+          <tr><td>20. Exams related to the course learning outcomes.</td><td><h:selectOneRadio value="#{evaluationBean.q20}">
+      <f:selectItem itemLabel="Yes" itemValue="Yes"/>
+      <f:selectItem itemLabel="No" itemValue="No"/>
+    </h:selectOneRadio></td></tr>
+          <tr><td>21. Projects/ assignments related to the course learning outcomes.</td><td><h:selectOneRadio value="#{evaluationBean.q21}">
+      <f:selectItem itemLabel="Yes" itemValue="Yes"/>
+      <f:selectItem itemLabel="No" itemValue="No"/>
+    </h:selectOneRadio></td></tr>
+        </table>
+        <div class="section">Comments (Additional Questions):<br/>
+          <h:inputTextarea value="#{evaluationBean.c4}" cols="70" rows="4"/>
+        </div>
+      </div>
+      <div class="nav">
+        <h:commandLink value="Back" action="evaluation3.xhtml?faces-redirect=true"/>
+        <h:commandLink value=" Next" action="evaluation5.xhtml?faces-redirect=true"/>
+      </div>
+    </h:form>
+  </ui:define>
+</ui:composition>
+</html>

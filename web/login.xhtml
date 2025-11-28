@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="jakarta.faces.html">
+<ui:composition template="template.xhtml">
+  <ui:define name="content">
+    <h:form>
+      <h3>Login</h3>
+      <h:panelGrid columns="2">
+        <h:outputLabel value="Username:"/>
+        <h:inputText value="#{loginBean.username}" required="true"/>
+        <h:outputLabel value="Password:"/>
+        <h:inputSecret value="#{loginBean.password}" required="true"/>
+      </h:panelGrid>
+      <div class="nav"><h:commandButton value="Login" action="#{loginBean.login}"/></div>
+    </h:form>
+  </ui:define>
+</ui:composition>
+</html>

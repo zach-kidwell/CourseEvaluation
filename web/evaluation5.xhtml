@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core">
+<ui:composition template="template.xhtml">
+  <ui:define name="content">
+    <h:form>
+      <div class="section">
+        <h3>OVERALL EXPERIENCE</h3>
+        <table>
+          <tr><td>22. This was a worthwhile class.</td>
+              <td><h:selectOneRadio value="#{evaluationBean.q22}">
+      <f:selectItem itemLabel="Yes" itemValue="Yes"/>
+      <f:selectItem itemLabel="No" itemValue="No"/>
+    </h:selectOneRadio></td></tr>
+          <tr><td>23. Would you recommend this course to a fellow student</td>
+              <td><h:selectOneRadio value="#{evaluationBean.q23}">
+      <f:selectItem itemLabel="Yes" itemValue="Yes"/>
+      <f:selectItem itemLabel="No" itemValue="No"/>
+    </h:selectOneRadio></td></tr>
+        </table>
+        <br/>
+        <table>
+          <tr><th>24. Overall, how do you rate your experience in this course?</th></tr>
+          <tr><td>
+            <h:selectOneRadio value="#{evaluationBean.q24}">
+              <f:selectItem itemLabel="Excellent" itemValue="Excellent"/>
+              <f:selectItem itemLabel="Very good" itemValue="Very good"/>
+              <f:selectItem itemLabel="Good" itemValue="Good"/>
+              <f:selectItem itemLabel="Fair" itemValue="Fair"/>
+              <f:selectItem itemLabel="Poor" itemValue="Poor"/>
+            </h:selectOneRadio>
+          </td></tr>
+        </table>
+        <br/>
+        <table>
+          <tr><th>25. How many hours did you spend per week on preparation/homework for this course?</th></tr>
+          <tr><td>
+            <h:selectOneRadio value="#{evaluationBean.q25}">
+              <f:selectItem itemLabel="A: 0–4h" itemValue="A"/>
+              <f:selectItem itemLabel="B: 5–8h" itemValue="B"/>
+              <f:selectItem itemLabel="C: 9–12h" itemValue="C"/>
+              <f:selectItem itemLabel="D: 12–16h" itemValue="D"/>
+            </h:selectOneRadio>
+          </td></tr>
+        </table>
+        <div class="section">Comments (Overall Experience):<br/>
+          <h:inputTextarea value="#{evaluationBean.c5}" cols="70" rows="4"/>
+        </div>
+      </div>
+      <div class="nav">
+        <h:commandLink value="Back" action="evaluation4.xhtml?faces-redirect=true"/>
+        <h:commandLink value=" Next" action="evaluation6.xhtml?faces-redirect=true"/>
+      </div>
+    </h:form>
+  </ui:define>
+</ui:composition>
+</html>

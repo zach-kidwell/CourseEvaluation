@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="jakarta.faces.html">
+
+<ui:composition template="template.xhtml">
+    <ui:define name="content">
+
+        <h:form>
+            <h3>WAYS OF IMPROVEMENT</h3>
+
+            <p>What changes would you recommend to improve this course?</p>
+            <h:inputTextarea value="#{evaluationBean.i_changes}"
+                             cols="70" rows="4" />
+
+            <br /><br />
+
+            <p>Any further, constructive comment:</p>
+            <h:inputTextarea value="#{evaluationBean.i_more}"
+                             cols="70" rows="4" />
+
+            <br /><br />
+
+            <div class="nav">
+                <h:commandButton value="Back"
+                                 action="evaluation7.xhtml?faces-redirect=true" />
+
+                <h:commandButton value="Finish and View"
+                                 action="#{evaluationBean.saveEvaluation}" />
+            </div>
+        </h:form>
+
+    </ui:define>
+</ui:composition>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core">
+<ui:composition template="template.xhtml">
+  <ui:define name="content">
+    <h:form>
+      <div class="section">
+        <table>
+          <tr>
+            <th>FEEDBACK AND ASSESSMENT</th>
+            <th>Strongly Agree</th>
+            <th>Agree</th>
+            <th>Neutral</th>
+            <th>Disagree</th>
+            <th>Strongly Disagree</th>
+          </tr>
+<tr><td>11. Information about the assessment was communicated clearly.</td><td colspan='5'><h:selectOneRadio value="#{evaluationBean.q11}">
+      <f:selectItem itemLabel="Strongly Agree" itemValue="5"/>
+      <f:selectItem itemLabel="Agree" itemValue="4"/>
+      <f:selectItem itemLabel="Neutral" itemValue="3"/>
+      <f:selectItem itemLabel="Disagree" itemValue="2"/>
+      <f:selectItem itemLabel="Strongly Disagree" itemValue="1"/>
+    </h:selectOneRadio></td></tr><tr><td>12. Feedback was provided within the stated timeframe.</td><td colspan='5'><h:selectOneRadio value="#{evaluationBean.q12}">
+      <f:selectItem itemLabel="Strongly Agree" itemValue="5"/>
+      <f:selectItem itemLabel="Agree" itemValue="4"/>
+      <f:selectItem itemLabel="Neutral" itemValue="3"/>
+      <f:selectItem itemLabel="Disagree" itemValue="2"/>
+      <f:selectItem itemLabel="Strongly Disagree" itemValue="1"/>
+    </h:selectOneRadio></td></tr><tr><td>13. Feedback showed how to improve my work (e.g. corrections including comments).</td><td colspan='5'><h:selectOneRadio value="#{evaluationBean.q13}">
+      <f:selectItem itemLabel="Strongly Agree" itemValue="5"/>
+      <f:selectItem itemLabel="Agree" itemValue="4"/>
+      <f:selectItem itemLabel="Neutral" itemValue="3"/>
+      <f:selectItem itemLabel="Disagree" itemValue="2"/>
+      <f:selectItem itemLabel="Strongly Disagree" itemValue="1"/>
+    </h:selectOneRadio></td></tr>
+        </table>
+        <div class="nav"><h:commandLink value="Back" action="evaluation1.xhtml?faces-redirect=true"/> <h:commandLink value=" Next" action="evaluation3.xhtml?faces-redirect=true"/></div>
+        <div class="section">Comments (Feedback and Assessment): <br/><h:inputTextarea value="#{evaluationBean.c2}" cols="70" rows="4"/></div>
+      </div>
+    </h:form>
+  </ui:define>
+</ui:composition>
+</html>

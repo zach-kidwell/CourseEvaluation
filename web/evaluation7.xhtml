@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="jakarta.faces.html">
+<ui:composition template="template.xhtml">
+  <ui:define name="content">
+    <h:form>
+      <h3>COMMENTS ON STRENGTHS</h3>
+      <p>What did you like best about your instructor's teaching?</p>
+      <h:inputTextarea value="#{evaluationBean.s_best}" cols="70" rows="4"/><br/><br/>
+      <p>What did you like least about your instructor's teaching?</p>
+      <h:inputTextarea value="#{evaluationBean.s_least}" cols="70" rows="4"/>
+      <div class="nav">
+        <h:commandLink value="Back" action="evaluation6.xhtml?faces-redirect=true"/>
+        <h:commandLink value=" Next" action="evaluation8.xhtml?faces-redirect=true"/>
+      </div>
+    </h:form>
+  </ui:define>
+</ui:composition>
+</html>

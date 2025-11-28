@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<ui:composition template="template.xhtml">
+  <ui:define name="content">
+    <h3>Course Evaluation Summary (Database Results)</h3>
+    <p>This table displays all evaluations stored in the MySQL database.</p>
+
+    <h:form>
+      <h:dataTable value="#{evaluationBean.evaluations}" var="e" border="1" style="width:100%; border-collapse: collapse;">
+        <h:column><f:facet name="header">ID</f:facet>#{e.id}</h:column>
+
+        <h:column><f:facet name="header">Q1</f:facet>#{evaluationBean.convert(e.q1)}</h:column>
+        <h:column><f:facet name="header">Q2</f:facet>#{evaluationBean.convert(e.q2)}</h:column>
+        <h:column><f:facet name="header">Q3</f:facet>#{evaluationBean.convert(e.q3)}</h:column>
+        <h:column><f:facet name="header">Q4</f:facet>#{evaluationBean.convert(e.q4)}</h:column>
+        <h:column><f:facet name="header">Q5</f:facet>#{evaluationBean.convert(e.q5)}</h:column>
+        <h:column><f:facet name="header">Q6</f:facet>#{evaluationBean.convert(e.q6)}</h:column>
+        <h:column><f:facet name="header">Q7</f:facet>#{evaluationBean.convert(e.q7)}</h:column>
+        <h:column><f:facet name="header">Q8</f:facet>#{evaluationBean.convert(e.q8)}</h:column>
+        <h:column><f:facet name="header">Q9</f:facet>#{evaluationBean.convert(e.q9)}</h:column>
+        <h:column><f:facet name="header">Q10</f:facet>#{evaluationBean.convert(e.q10)}</h:column>
+        <h:column><f:facet name="header">Q11</f:facet>#{evaluationBean.convert(e.q11)}</h:column>
+        <h:column><f:facet name="header">Q12</f:facet>#{evaluationBean.convert(e.q12)}</h:column>
+        <h:column><f:facet name="header">Q13</f:facet>#{evaluationBean.convert(e.q13)}</h:column>
+        <h:column><f:facet name="header">Comment 2</f:facet>#{e.c2}</h:column>
+
+        <h:column><f:facet name="header">Q14</f:facet>#{evaluationBean.convert(e.q14)}</h:column>
+        <h:column><f:facet name="header">Q15</f:facet>#{evaluationBean.convert(e.q15)}</h:column>
+        <h:column><f:facet name="header">Q16</f:facet>#{evaluationBean.convert(e.q16)}</h:column>
+        <h:column><f:facet name="header">Comment 3</f:facet>#{e.c3}</h:column>
+
+        <h:column><f:facet name="header">Q17</f:facet>#{evaluationBean.convert(e.q17)}</h:column>
+        <h:column><f:facet name="header">Q18</f:facet>#{evaluationBean.convert(e.q18)}</h:column>
+        <h:column><f:facet name="header">Q19</f:facet>#{evaluationBean.convert(e.q19)}</h:column>
+        <h:column><f:facet name="header">Q20</f:facet>#{evaluationBean.convert(e.q20)}</h:column>
+        <h:column><f:facet name="header">Q21</f:facet>#{evaluationBean.convert(e.q21)}</h:column>
+        <h:column><f:facet name="header">Comment 4</f:facet>#{e.c4}</h:column>
+
+        <h:column><f:facet name="header">Q22</f:facet>#{evaluationBean.convert(e.q22)}</h:column>
+        <h:column><f:facet name="header">Q23</f:facet>#{evaluationBean.convert(e.q23)}</h:column>
+        <h:column><f:facet name="header">Q24</f:facet>#{evaluationBean.convert(e.q24)}</h:column>
+        <h:column><f:facet name="header">Q25</f:facet>#{evaluationBean.convert(e.q25)}</h:column>
+        <h:column><f:facet name="header">Comment 5</f:facet>#{e.c5}</h:column>
+
+        <h:column><f:facet name="header">Q26</f:facet>#{evaluationBean.convert(e.q26)}</h:column>
+        <h:column><f:facet name="header">Q27</f:facet>#{evaluationBean.convert(e.q27)}</h:column>
+        <h:column><f:facet name="header">Comment 6</f:facet>#{e.c6}</h:column>
+
+        <h:column><f:facet name="header">Best Aspects</f:facet>#{e.s_best}</h:column>
+        <h:column><f:facet name="header">Least Liked</f:facet>#{e.s_least}</h:column>
+        <h:column><f:facet name="header">Recommended Changes</f:facet>#{e.i_changes}</h:column>
+        <h:column><f:facet name="header">Additional Comments</f:facet>#{e.i_more}</h:column>
+      </h:dataTable>
+
+      <br/>
+      <h:commandLink value="Back to Start" action="evaluation1.xhtml?faces-redirect=true" />
+    </h:form>
+  </ui:define>
+</ui:composition>
+</html>
