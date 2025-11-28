@@ -9,28 +9,6 @@ A polished, full-stack Java web application that demonstrates building a course 
 - [Project Structure](#project-structure)
 - [Getting Started](#getting-started)
 - [Configuration](#configuration)
-# Project 4 - Course Eval
-
-**Author:** Zach Kidwell
-
-Course Evaluation System — a full-stack Java web application built with JSF for the frontend, JDBC for data access, and MySQL for persistence. This repository includes the application source code and the database schema used to create and seed the evaluation database.
-
-**Table of Contents**
-- [Demo](#demo)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Project Structure](#project-structure)
-- [Database Schema](#database-schema)
-- [Getting Started](#getting-started)
-- [Configuration](#configuration)
-- [Running the App](#running-the-app)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
-
-## Demo
-
-- Screenshot or demo link: (add screenshot or GitHub Pages link here)
 
 ## Features
 
